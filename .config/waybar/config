@@ -93,7 +93,7 @@
       "format": "<span size='x-large' rise='-2500'>󰢮</span> {text}",
       "exec": "gpu-usage-waybar",
       "return-type": "json",
-      "on-click": "ghostty -e nvtop",
+      "on-click": "steam",
     },
 
     "custom/nvidia": {
@@ -140,10 +140,6 @@
     "cpu": {
       "interval": 4,
       "format": " {usage}%",
-      "states": {
-        "warning": 80,
-        "critical": 95
-      }
     },
 
     "hyprland/language": {
@@ -160,10 +156,6 @@
       "interval": 4,
       "format": " {percentage}%",
       "on-click": "kitty -- btop",
-      "states": {
-        "warning": 80,
-        "critical": 95
-      },
       "tooltip": "{}",
       "tooltip-format": "{used}/{total} GiB"
     },
@@ -184,7 +176,7 @@
       "tooltip": "{}",
       "tooltip-format-wifi": "{ifname}\n{essid}\n{signalStrength}% \n{frequency} GHz\n󰇚 {bandwidthDownBits}\n󰕒 {bandwidthUpBits}",
       "tooltip-format-ethernet": "{ifname}\n󰇚 {bandwidthDownBits} \n󰕒 {bandwidthUpBits}",
-      "on-click": "iwgtk& aplay ~/.config/sounds/interact.wav",
+      "on-click": "nm-connection-editor",
       "format-icons": ["󰤫", "󰤟", "󰤢", "󰤥", "󰤨"],
       "states": {
         "normal": 25
@@ -250,16 +242,17 @@
         "phone": "",
         "portable": "",
         "car": "",
-        "default": ["", ""]
+        "default": ["", "  "]
       },
       "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
       "on-click": "pwvucontrol & aplay ~/.config/sounds/interact.wav",
+      "on-click-middle": "kitty cava",
       "tooltip": true,
       "scroll-step": 5
     },
 
     "pulseaudio#input": {
-      "format": " {icon} {format_source}%",
+      "format": "{icon} {format_source}%",
       "format-source": "{volume}",
       "format-source-muted": "{volume}",
       "on-scroll-up": "sh -c 'vol=$(pactl get-source-volume @DEFAULT_SOURCE@ | grep -oP \"\\d+(?=%)\" | head -1); if [ \"$vol\" -lt 100 ]; then pactl set-source-volume @DEFAULT_SOURCE@ +5%; fi'",
@@ -307,7 +300,7 @@
       "format": "󰣇",
       // "format": "",
       "tooltip": false,
-      "on-click": "aplay /home/jan-aarela/.config/sounds/pacman.wav> /dev/null 2>/dev/null & kitty --title Pacman fish -c '~/.config/fish/Pacman.sh & sudo pacman -Syu'"
+      "on-click": "kitty -e fastfetch"
     },
 
       "custom/notification": {
