@@ -11,9 +11,6 @@
       "top": 0,
     }
   },
-  "general": {
-    "multithreading": true
-  },
   "display": {
     "separator": "➜   "
   },

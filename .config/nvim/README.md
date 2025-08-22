@@ -1,6 +1,3 @@
-## I stole my Nvim from Bread
-
-
 ## Bread's guide to **Neovim** configuration
 
 #### Build off of mine, or start your own!

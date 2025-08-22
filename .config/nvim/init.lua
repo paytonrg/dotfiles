@@ -39,6 +39,8 @@ Plug('ron-rs/ron.vim') --ron syntax highlighting
 Plug('MeanderingProgrammer/render-markdown.nvim') --render md inline
 Plug('emmanueltouzery/decisive.nvim') --view csv files
 Plug('folke/twilight.nvim') --surrounding dim
+Plug ('nvim-lua/plenary.nvim') --telescope dependency
+Plug ('nvim-telescope/telescope.nvim') --telescope for recent files
 
 vim.call('plug#end')
 

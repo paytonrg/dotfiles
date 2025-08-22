@@ -34,15 +34,15 @@
 /* Main bar defaults */ /* {{{ */
 #waybar.main {
   background: @background;
-  font-family: "JetBrains Mono Nerd Font";
-  font-size: 10pt;
+  font-family: "Monocraft";
+  font-size: 11pt;
   font-weight: bold;
   
 }
 
 #waybar.main button {
-  font-family: JetBrains Mono Nerd Font;
-  font-size: 10pt;
+  font-family: Monocraft;
+  font-size: 11pt;
   font-weight: 500;
   transition: all 0.15s ease-in-out;
 } /* }}} */
@@ -53,6 +53,7 @@
 #waybar.main #custom-weather,
 #waybar.main #custom-notification,
 #waybar.main #custom-battery,
+#waybar.main #custom-cava,
 #waybar.main #keyboard-state,
 #waybar.main #network,
 #waybar.main #battery,
@@ -68,15 +69,15 @@
 #waybar.main #tray,
 #waybar.main #window,
 #waybar.main #disk {
-  padding-left: 8pt;
-  padding-right: 8pt;
-  padding-bottom: 4px;
-  padding-top: 4px;
+  padding-left: 4pt;
+  padding-right: 4pt;
+  padding-bottom: 2px;
+  padding-top: 2px;
   background: transparent;
 }
 
 #waybar.main #tray {
-  padding-right: 6pt;
+  padding-right: 4pt;
 }
 
 #waybar.main #custom-weather {
@@ -98,7 +99,7 @@
 
 
 #custom-notification {
-  font-family: "NotoSansMono Nerd Font";
+  font-family: "Monocraft";
   color: @color13;
 }
 
@@ -124,8 +125,8 @@
 }
 
 #waybar.main #network.info {
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 4px;
+  padding-left: 4px;
   color: @color12;
   background: transparent;
 }
@@ -133,12 +134,12 @@
 #waybar.main #network.info.wifi.normal,
 #waybar.main #network.info.ethernet {
   color: @color12;
-  padding-right: 15px;
+  padding-right: 4px;
 }
 
 #waybar.main #network.info.wifi {
-  color: @color12;
-  padding-right: 15px;
+  color: @color13;
+  padding-right: 4px;
 } /* }}} */
 
 /* Submap */ /* {{{ */
@@ -200,6 +201,16 @@
   animation-timing-function: steps(15);
 } /* }}} */
 
+/* Cava */
+#custom-cava {
+    color: #8FBC8F;
+    border-left: 0px;
+    border-right: 0px;
+    padding-bottom: 6px;
+    font-family: "bargraph";
+    font-size: 22px;
+}
+
 /* Workspace */ /* {{{ */
 /* Default workspace settings */
 #waybar.main #workspaces button {
@@ -211,8 +222,8 @@
   border-radius: 16px;
   margin-bottom: 8px;
   margin-top: 8px;
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 3px;
+  margin-right: 3px;
   transition: all 0.25s ease;
 }
 
@@ -248,7 +259,8 @@
 #waybar.main #custom-spacer1,
 #waybar.main #custom-spacer2,
 #waybar.main #custom-spacer3 {
-  font-size: 10pt;
+  font-family: JetBrains Mono Nerd Font;
+  font-size: 11pt;
   font-weight: 500;
   color: @foreground;
   background: transparent;
@@ -257,12 +269,12 @@
 
 /* Custom tray icon */ /* {{{ */
 #waybar.main #custom-trayicon {
-  font-size: 11pt;
+  font-size: 15pt;
   font-weight: bold;
   font-style: italic;
   color: @foreground;
   background: transparent;
-  padding-right: 6pt;
+  padding-right: 4pt;
   padding-left: 2pt;
 }
 /* }}} */
@@ -270,10 +282,10 @@
 /* Tooltip */ /* {{{ */
 tooltip {
   background: @background;
-  border: 3px solid @caution;
-  border-radius: 8px;
+  border: 1px solid @caution;
+  border-radius: 3px;
   font-weight: 500;
-  font-family: "JetBrains Mono Nerd Font";
+  font-family: "Monocraft";
 }
 
 #waybar.main #tray menu {
