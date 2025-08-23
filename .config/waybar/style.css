@@ -76,6 +76,15 @@
   background: transparent;
 }
 
+
+#waybar.main #custom-notification {
+  padding-left: 0pt;
+  padding-right: 6pt;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  background: transparent;
+}
+
 #waybar.main #tray {
   padding-right: 4pt;
 }
