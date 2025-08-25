@@ -1,15 +1,17 @@
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun,clipboard:greenclip print,run,filebrowser,window,ssh";
+	modi:                       "drun,clipboard:greenclip print,run,filebrowser";
     show-icons:                 true;
     display-drun:               " Apps";
     display-clipboard:          " Clip";
     display-run:                " Run";
     display-filebrowser:        " Files";
-    display-window:             " Tabs";
-    display-ssh:                " ssh" ;
+    display-notes:				" Notes";
+  /*  display-window:             " Tabs";   */
+  /*   display-ssh:                " ssh" ;   */
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
 }
 
-@theme "/home/payton/.config/rofi/theme.rasi"
+/* Dark theme. */
+@import ".config/rofi/theme.rasi"
