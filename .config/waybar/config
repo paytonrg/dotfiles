@@ -21,8 +21,7 @@
     ],
 
 	"modules-center": [
-      "pulseaudio#input",
-      "custom-cava",
+      "custom/cava"
 	],
 
     "modules-right": [
@@ -61,7 +60,36 @@
       "tooltip": true,
       "interval": 1800,
       "exec": "wttrbar --nerd --fahrenheit --location 47403",
-      "return-type": "json"
+      "return-type": "json",
+      "on-click": "exec /home/payton/.config/astroterm/Astroterm.sh"
+    },
+
+    "custom/cava": {
+      "exec": "~/.config/waybar/bash/cava.sh",
+      "format": "{text}",
+	  "font-family": "JetBrains Mono Nerd Font",
+      "on-click": "pwvucontrol",
+      "on-scroll-up": "playerctl next",
+      "on-scroll-down": "playerctl previous",
+      "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+    },
+
+    "custom/music": {
+      "format": "{text}",
+      "format-icons": {
+        // "Playing": " ", // Uncomment if not using caway
+        "Paused": " ",
+        "Stopped": "&#x202d;ﭥ " // This stop symbol is RTL. So &#x202d; is left-to-right override.
+    },
+      "escape": true,
+      "tooltip": true,
+      "exec": "/home/payton/.config/waybar/bash/caway",
+      "return-type": "json",
+      "on-click": "playerctl play-pause",
+      "on-scroll-up": "playerctl next",
+      "on-scroll-down": "playerctl previous",
+      "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+      "max-length": 35
     },
 
     "group/tray": {
@@ -185,6 +213,7 @@
       "tooltip-format-wifi": "{ifname}\n{essid}\n{signalStrength}% \n{frequency} GHz\n󰇚 {bandwidthDownBits}\n󰕒 {bandwidthUpBits}",
       "tooltip-format-ethernet": "{ifname}\n󰇚 {bandwidthDownBits} \n󰕒 {bandwidthUpBits}",
       "on-click": "nm-connection-editor",
+	  "on-click-right": "blueman-applet",
       "format-icons": ["󰤫", "󰤟", "󰤢", "󰤥", "󰤨"],
       "states": {
         "normal": 25
@@ -276,8 +305,8 @@
       "hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
       "critical-threshold": 90,
       "interval": 4,
-      "format": "{icon} {temperatureC}°",
-      "format-icons": ["", "", "", "", ""],
+      "format": "{icon}{temperatureC}°",
+      "format-icons": [" ", " ", " ", " ", " "],
       "tooltip": true,
       "tooltip-format": "{temperatureF}°",
     },

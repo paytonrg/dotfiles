@@ -1,7 +1,4 @@
-/* Wallust colors */
-@import url("colors.css");
-
-
+@import "/home/payton/.cache/wal/colors-waybar.css";
 
 /* Reset all styles */ /* {{{ */
 * {
@@ -76,7 +73,6 @@
   background: transparent;
 }
 
-
 #waybar.main #custom-notification {
   padding-left: 0pt;
   padding-right: 6pt;
@@ -92,9 +88,12 @@
 #waybar.main #custom-weather {
   padding-right: 3pt;
 }
-/* }}} */
 
-/* Module colors */ /* {{{ */
+#waybar.main #pulseaudio {
+  color: @color13;
+}
+
+/* Hardware modules COLORS */
 #waybar.main #custom-gpu-usage,
 #waybar.main #cpu,
 #waybar.main #temperature,
@@ -102,54 +101,71 @@
 #waybar.main #memory.swap,
 #waybar.main #disk,
 #waybar.main #network {
-  color: @color12;
-}
-
-
-
-#custom-notification {
-  font-family: "Monocraft";
-  color: @color13;
-}
-
-#waybar.main #pulseaudio {
-  color: @color13;
+  color: @color4;
 }
 
 #waybar.main #custom-battery,
 #waybar.main #language,
 #waybar.main #backlight,
 #waybar.main #battery {
-  color: @color13;
-}
-
-#waybar.main #custom-weather,
-#waybar.main #clock {
-  color: @color14;
-}
-
-#waybar.main #window {
-  color: @foreground;
-  margin-top: -0px;
+  color: @color4;
 }
 
 #waybar.main #network.info {
   padding-right: 4px;
   padding-left: 4px;
-  color: @color12;
+  color: @color4;
   background: transparent;
 }
 
 #waybar.main #network.info.wifi.normal,
 #waybar.main #network.info.ethernet {
-  color: @color12;
-  padding-right: 4px;
+  color: @color4;
+  padding-right: 0px;
 }
 
 #waybar.main #network.info.wifi {
-  color: @color13;
+  color: @color4;
   padding-right: 4px;
 } /* }}} */
+
+/* Day stats COLORS */
+#custom-notification {
+  font-family: "Monocraft";
+  color: @color1;
+}
+
+#waybar.main #custom-weather,
+#waybar.main #clock {
+  color: @color1;
+}
+
+/* Cava */
+#custom-cava {
+    color: @color1;
+    border-left: 2px;
+    border-right: 2px;
+    padding-bottom: 6px;
+    font-size: 18px;
+    font-family: "JetBrains Mono Nerd Font";
+}
+
+#custom-music.Playing {
+    background: transparent;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+    font-weight: bold;
+    color: #fff;
+}
+
+#custom-music.Paused,
+#custom-music.Stopped {
+    background: #161925;
+}
+
+#waybar.main #window {
+  color: @color5;
+  margin-top: -0px;
+}
 
 /* Submap */ /* {{{ */
 #waybar.main #submap.󰲏 {
@@ -210,20 +226,10 @@
   animation-timing-function: steps(15);
 } /* }}} */
 
-/* Cava */
-#custom-cava {
-    color: #8FBC8F;
-    border-left: 0px;
-    border-right: 0px;
-    padding-bottom: 6px;
-    font-family: "bargraph";
-    font-size: 22px;
-}
-
 /* Workspace */ /* {{{ */
 /* Default workspace settings */
 #waybar.main #workspaces button {
-  color: @caution;
+  color: @color1;
   background: transparent;
   border: 1.5px solid transparent;
   padding-left: 2pt;
@@ -238,24 +244,24 @@
 
 /* Focused workspace */
 #waybar.main #workspaces button.visible {
-  color: @foreground;
+  color: @color1;
 }
 
 /* Focused workspace & monitor */
 #waybar.main #workspaces button.active {
-  color: @window;
+  color: @color5;
   border: 1.5px solid @caution;
 }
 
 /* Style when cursor is on the button */
 #waybar.main #workspaces button:hover {
-  color: @window;
+  color: @color15;
 }
 
 /* Special workplace animation */
 #waybar.main #workspaces button.special.active {
   border: 1.5px solid transparent;
-  color: @window;
+  color: @color1;
   transition: all 0s ease;
   animation-iteration-count: infinite;
   animation-direction: alternate;
