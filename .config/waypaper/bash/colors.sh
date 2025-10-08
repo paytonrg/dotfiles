@@ -1,6 +1,8 @@
 #!/bin/bash
 wal -i "$1"
 
+swaymsg reload
+
 # Kill waybar and common waybar-related processes
 pkill waybar || true
 pkill cava || true
