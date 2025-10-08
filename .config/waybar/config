@@ -14,10 +14,13 @@
       "custom/spacer3",
       "custom/spacer2",
       "hyprland/workspaces",
+	  "sway/workspaces",
+	  "sway/mode",
       "custom/spacer2",
       "custom/spacer3",
       "hyprland/submap",
-      "hyprland/window"
+      "hyprland/window",
+	  "sway/window"
     ],
 
 	"modules-center": [
@@ -71,7 +74,8 @@
       "on-click": "pwvucontrol",
       "on-scroll-up": "playerctl next",
       "on-scroll-down": "playerctl previous",
-      "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+      "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+	  "on-click-middle": "kitty cava"
     },
 
     "custom/music": {
@@ -191,7 +195,7 @@
 
     "memory#ram": {
       "interval": 4,
-      "format": " {percentage}%",
+      "format": "<span font='JetBrainsMono Nerd Font'></span> {percentage}%",
       "on-click": "kitty -- btop",
       "tooltip": "{}",
       "tooltip-format": "{used}/{total} GiB"
@@ -255,6 +259,29 @@
     },
 
     "hyprland/workspaces": {
+      "disable-scroll-wraparound": true,
+      "smooth-scrolling-threshold": 4,
+      "enable-bar-scroll": true,
+      "format": "{icon}",
+      "show-special": true,
+      "special-visible-only": false,
+      "format-icons": {
+        "magic": " ",
+        "10": "󰊴 ",
+        "20": "󰊴 ",
+      }
+    },
+
+    "sway/window": {
+      "format": "{title}",
+      "max-length": 48,
+      "tooltip": false,
+      "icon": true,
+      "icon-size": 18,
+      "tooltip": true
+    },
+
+    "sway/workspaces": {
       "disable-scroll-wraparound": true,
       "smooth-scrolling-threshold": 4,
       "enable-bar-scroll": true,
