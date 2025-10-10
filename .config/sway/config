@@ -4,8 +4,13 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+exec hyprlock
+
 # Include pywal colors
 include ~/.cache/wal/colors-sway
+
+# Autotiling
+exec_always autotiling
 
 ### Variables
 #
@@ -47,14 +52,27 @@ exec waypaper --restore --backend swww
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
+output DP-1 mode 2560x1440 pos 1920 0
+
+output DP-2 mode 1920x1080 pos 0 0
+
+
+# Set default monitor for the cursor
+focus output DP-1
+
+# Assign workspaces to monitors
+workspace 1 output DP-1
+
+workspace 10 output DP-2
+
 ### Idle configuration
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
+ exec swayidle -w \
+          timeout 300 'hyprlock' \
+          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+          before-sleep 'hyprlock'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -249,7 +267,7 @@ bar {
 # Title Bar and Border Settings
 smart_borders on
 default_border pixel 1
-corner_radius 4
+corner_radius 6
 shadows enable
 shadows_on_csd enable
 shadow_blur_radius 20
@@ -272,6 +290,9 @@ for_window [app_id="waypaper"] move position center
 for_window [class="steam" title="Friends List"] floating enable
 for_window [class="steam" title="Friends List"] border none
 for_window [class="steam" title="Friends List"] move position center
+
+# Fastfetch button
+for_window [app_id="kitty-fastfetch"] floating enable, resize set 1150 500, move position cursor
 
 
 }
