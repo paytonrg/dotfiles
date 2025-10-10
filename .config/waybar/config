@@ -364,7 +364,7 @@
       "format": "󰣇",
       // "format": "",
       "tooltip": false,
-      "on-click": "kitty -e fastfetch"
+      "on-click": "kitty --class kitty-fastfetch --hold fastfetch"
     },
 
       "custom/notification": {
