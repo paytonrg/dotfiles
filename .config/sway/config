@@ -69,10 +69,10 @@ workspace 10 output DP-2
 #
 # Example configuration:
 #
- exec swayidle -w \
-          timeout 300 'hyprlock' \
-          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-          before-sleep 'hyprlock'
+# exec swayidle -w \
+#          timeout 300 'hyprlock' \
+#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+#          before-sleep 'hyprlock'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
