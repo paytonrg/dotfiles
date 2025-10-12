@@ -1,18 +1,11 @@
-Big list of packages used in waybar:
-TLP
-TLPUI
-btop
-nm-applet
-networkmanager
-gpu-usage-waybar
-wttrbar
-chromium
-swaync
-Qdirstat
-blueman
-pipwire volume control
+Linux Config:
 
+Primary programs / applications
+1. Waybar
+2. Rofi
+3. Pywal
+4. Waypaper
+5. NVIM
+6. Kitty
 
-Other Packages:
-sshfs
-
+Should work well with either Sway or Hyprland. Waybar has been configured for both.
