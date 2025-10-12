@@ -196,7 +196,7 @@
     "memory#ram": {
       "interval": 4,
       "format": "<span font='JetBrainsMono Nerd Font'></span> {percentage}%",
-      "on-click": "kitty -- btop",
+      "on-click": "kitty bash -ic btop",
       "tooltip": "{}",
       "tooltip-format": "{used}/{total} GiB"
     },
@@ -364,7 +364,7 @@
       "format": "󰣇",
       // "format": "",
       "tooltip": false,
-      "on-click": "kitty --class kitty-fastfetch --hold fastfetch"
+      "on-click": "kitty --class kitty-fastfetch bash -c 'fastfetch; exec bash'"
     },
 
       "custom/notification": {
