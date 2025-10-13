@@ -1,6 +1,6 @@
 /*****----- Configuration -----*****/
 configuration {
-modi:                       "drun,clipboard:greenclip print,notes:/home/payton/Scripts/RofiNotes.sh,run,filebrowser";
+modi:                       "drun,clipboard:/home/payton/Scripts/RofiClipboard.sh,notes:/home/payton/Scripts/RofiNotes.sh,run,filebrowser";
     show-icons:                 true;
     display-drun:               " Apps";
     display-clipboard:          " Clip";
