@@ -161,7 +161,7 @@
       "interval": 1,
       "format": " {:%d  %I:%M}",
       "timezone": "America/Indiana/Indianapolis",
-      "tooltip-format": "{:%d.%m.%Y   Week %W}\n\n<tt><small>{calendar}</small></tt>",
+      "tooltip-format": "{:%d.%m.%Y   Week %W}\n\n<big>{calendar}</big>",
       "calendar": {
         "mode": "month",
         "mode-mon-col": 3,
