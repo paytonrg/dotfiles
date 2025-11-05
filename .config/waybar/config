@@ -125,7 +125,7 @@
 
     "custom/gpu-usage": {
       "format": "<span size='x-large' rise='-2500'>󰢮</span> {text}",
-      "exec": "gpu-usage-waybar",
+      "exec": "gpu-usage-waybar --text-no-memory",
       "return-type": "json",
       "on-click": "steam",
     },
