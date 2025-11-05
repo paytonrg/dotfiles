@@ -30,18 +30,18 @@
 
 /* Main bar defaults */ /* {{{ */
 #waybar.main {
-  background: @background;
-  font-family: "Monocraft";
-  font-size: 11pt;
-  font-weight: bold;
-  
+background: @background;
+font-family: "Monocraft";
+font-size: 11pt;
+font-weight: bold;
+
 }
 
 #waybar.main button {
-  font-family: Monocraft;
-  font-size: 11pt;
-  font-weight: 500;
-  transition: all 0.15s ease-in-out;
+font-family: Monocraft;
+font-size: 11pt;
+font-weight: 500;
+transition: all 0.15s ease-in-out;
 } /* }}} */
 
 /* Main bar modules */ /* {{{ */
@@ -66,31 +66,31 @@
 #waybar.main #tray,
 #waybar.main #window,
 #waybar.main #disk {
-  padding-left: 4pt;
-  padding-right: 4pt;
-  padding-bottom: 2px;
-  padding-top: 2px;
-  background: transparent;
+padding-left: 4pt;
+padding-right: 4pt;
+padding-bottom: 2px;
+padding-top: 2px;
+background: transparent;
 }
 
 #waybar.main #custom-notification {
-  padding-left: 0pt;
-  padding-right: 6pt;
-  padding-bottom: 2px;
-  padding-top: 2px;
-  background: transparent;
+padding-left: 0pt;
+padding-right: 6pt;
+padding-bottom: 2px;
+padding-top: 2px;
+background: transparent;
 }
 
 #waybar.main #tray {
-  padding-right: 4pt;
+padding-right: 4pt;
 }
 
 #waybar.main #custom-weather {
-  padding-right: 3pt;
+padding-right: 3pt;
 }
 
 #waybar.main #pulseaudio {
-  color: @color13;
+color: @color13;
 }
 
 /* Hardware modules COLORS */
@@ -101,89 +101,99 @@
 #waybar.main #memory.swap,
 #waybar.main #disk,
 #waybar.main #network {
-  color: @color4;
+color: @color4;
 }
 
 #waybar.main #custom-battery,
 #waybar.main #language,
 #waybar.main #backlight,
 #waybar.main #battery {
-  color: @color4;
+color: @color4;
 }
 
 #waybar.main #network.info {
-  padding-right: 4px;
-  padding-left: 4px;
-  color: @color4;
-  background: transparent;
+padding-right: 4px;
+padding-left: 4px;
+color: @color4;
+background: transparent;
 }
 
-#waybar.main #network.info.wifi.normal,
+#waybar.main #network.info.wifi.normal {
+color: @color4;
+padding-right: 5px;
+}
+
 #waybar.main #network.info.ethernet {
-  color: @color4;
-  padding-right: 0px;
+color: @color4;
+padding-right: 0px;
 }
 
 #waybar.main #network.info.wifi {
-  color: @color4;
-  padding-right: 4px;
+color: @color4;
+padding-right: 4px;
 } /* }}} */
 
 /* Day stats COLORS */
 #custom-notification {
-  font-family: "Monocraft";
-  color: @color1;
+font-family: "Monocraft";
+color: @color1;
 }
 
 #waybar.main #custom-weather,
 #waybar.main #clock {
-  color: @color1;
+color: @color1;
+}
+
+/* Calendar tooltip font */
+#clock tooltip {
+    font-family: "Monocraft", monospace;
+    font-size: 13px;
 }
 
 /* Cava */
 #custom-cava {
-    color: @color1;
-    border-left: 2px;
-    border-right: 2px;
-    padding-bottom: 6px;
-    font-size: 18px;
-    font-family: "JetBrains Mono Nerd Font";
+color: @color1;
+border-left: 2px;
+border-right: 2px;
+padding-bottom: 6px;
+font-size: 18px;
+font-family: "JetBrains Mono Nerd Font";
 }
 
 #custom-music.Playing {
-    background: transparent;
-    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
-    font-weight: bold;
-    color: #fff;
+background: transparent;
+text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.377);
+font-weight: bold;
+color: #fff;
 }
 
 #custom-music.Paused,
 #custom-music.Stopped {
-    background: #161925;
+background: #161925;
 }
 
 #waybar.main #window {
-  color: @color5;
-  margin-top: -0px;
+color: @color5;
+margin-top: -0px;
 }
 
 /* Submap */ /* {{{ */
 #waybar.main #submap.󰲏 {
-  color: @resize;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-name: blink-modifier-text;
-  animation-duration: 1s;
-  animation-timing-function: steps(15);
+color: @resize;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-name: blink-modifier-text;
+animation-duration: 1s;
+animation-timing-function: steps(15);
 }
 
 #waybar.main #submap. {
-  color: @date;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-name: blink-modifier-text;
-  animation-duration: 1s;
-  animation-timing-function: steps(15);
+color: @date;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-name: blink-modifier-text;
+animation-duration: 1s;
+animation-timing-function: steps(15);
 }
 /* }}} */
 
@@ -197,140 +207,140 @@
 #waybar.main #cpu.critical,
 #waybar.main #temperature.critical,
 #waybar.main #battery.critical.discharging {
-  color: @caution;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-name: blink-critical-text;
-  animation-duration: 1s;
-  animation-timing-function: steps(15);
+color: @caution;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-name: blink-critical-text;
+animation-duration: 1s;
+animation-timing-function: steps(15);
 } /* }}} */
 
 /* Main bar warnings */ /* {{{ */
 #waybar.main #pulseaudio.output.muted,
 #waybar.main #pulseaudio.input.source-muted {
-  color: @caution;
+color: @caution;
 }
 
 #waybar.main #custom-battery.warning,
 #waybar.main #battery.warning.discharging {
-  color: @warning;
+color: @warning;
 } /* }}} */
 
 /* Battery chargin */ /* {{{ */
 #waybar.main #custom-battery.charging {
-  color: @misc;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-name: blink-modifier-text;
-  animation-duration: 1s;
-  animation-timing-function: steps(15);
+color: @misc;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-name: blink-modifier-text;
+animation-duration: 1s;
+animation-timing-function: steps(15);
 } /* }}} */
 
 /* Hyprland Workspaces */ /* {{{ */
 /* Default workspace settings */
 #waybar.main #workspaces button {
-  color: @color1;
-  background: transparent;
-  border: none;  /* Remove all borders by default */
-  border-bottom: 2px solid transparent;  /* Add transparent bottom border */
-  padding-left: 2pt;
-  padding-right: 2pt;
-  border-radius: 0;  /* Remove border radius for cleaner underline */
-  margin-bottom: 8px;
-  margin-top: 8px;
-  margin-left: 3px;
-  margin-right: 3px;
-  transition: all 0.25s ease;
+color: @color1;
+background: transparent;
+border: none;  /* Remove all borders by default */
+border-bottom: 2px solid transparent;  /* Add transparent bottom border */
+padding-left: 2pt;
+padding-right: 2pt;
+border-radius: 0;  /* Remove border radius for cleaner underline */
+margin-bottom: 8px;
+margin-top: 8px;
+margin-left: 3px;
+margin-right: 3px;
+transition: all 0.25s ease;
 }
 /* Focused workspace */
 #waybar.main #workspaces button.visible {
-  color: @color1;
+color: @color1;
 }
 /* Focused workspace & monitor */
 #waybar.main #workspaces button.active {
-  color: @color5;
-  border-bottom: 2px solid @caution;  /* Underline instead of circle */
+color: @color5;
+border-bottom: 2px solid @caution;  /* Underline instead of circle */
 }
 /* Style when cursor is on the button */
 #waybar.main #workspaces button:hover {
-  color: @color15;
-  border-bottom: 2px solid @color15;  /* Optional: underline on hover too */
+color: @color15;
+border-bottom: 2px solid @color15;  /* Optional: underline on hover too */
 }
 /* Special workplace animation */
 #waybar.main #workspaces button.special.active {
-  border-bottom: 2px solid transparent;
-  color: @color1;
-  transition: all 0s ease;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-name: blink-modifier-text;
-  animation-duration: 1s;
-  animation-timing-function: steps(15);
+border-bottom: 2px solid transparent;
+color: @color1;
+transition: all 0s ease;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-name: blink-modifier-text;
+animation-duration: 1s;
+animation-timing-function: steps(15);
 } /* }}} */
 
 /* Sway Workspaces */ /* {{{ */
 /* Default workspace settings */
 #waybar.main #workspaces button {
-  color: @color1;
-  background: transparent;
-  border: none;  /* Remove all borders by default */
-  border-bottom: 2px solid transparent;  /* Add transparent bottom border */
-  padding-left: 2pt;
-  padding-right: 2pt;
-  border-radius: 0;  /* Remove border radius for cleaner underline */
-  margin-bottom: 8px;
-  margin-top: 8px;
-  margin-left: 3px;
-  margin-right: 3px;
-  transition: all 0.25s ease;
+color: @color1;
+background: transparent;
+border: none;  /* Remove all borders by default */
+border-bottom: 2px solid transparent;  /* Add transparent bottom border */
+padding-left: 2pt;
+padding-right: 2pt;
+border-radius: 0;  /* Remove border radius for cleaner underline */
+margin-bottom: 8px;
+margin-top: 8px;
+margin-left: 3px;
+margin-right: 3px;
+transition: all 0.25s ease;
 }
 /* Visible workspace on any monitor */
 #waybar.main #workspaces button.visible {
-  color: @color1;
+color: @color1;
 }
 /* Currently focused workspace (this is the main one for Sway) */
 #waybar.main #workspaces button.focused {
-  color: @color5;
-  border-bottom: 2px solid @caution;  /* Underline instead of circle */
+color: @color5;
+border-bottom: 2px solid @caution;  /* Underline instead of circle */
 }
 /* Style when cursor is on the button */
 #waybar.main #workspaces button:hover {
-  color: @color15;
-  border-bottom: 2px solid @color15;  /* Optional: underline on hover too */
+color: @color15;
+border-bottom: 2px solid @color15;  /* Optional: underline on hover too */
 }
 /* Urgent workspace */
 #waybar.main #workspaces button.urgent {
-  border-bottom: 2px solid transparent;
-  color: @color1;
-  transition: all 0s ease;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-name: blink-modifier-text;
-  animation-duration: 1s;
-  animation-timing-function: steps(15);
+border-bottom: 2px solid transparent;
+color: @color1;
+transition: all 0s ease;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-name: blink-modifier-text;
+animation-duration: 1s;
+animation-timing-function: steps(15);
 } /* }}} */
 
 /* Custom slashes as spacers */ /* {{{ */
 #waybar.main #custom-spacer1,
 #waybar.main #custom-spacer2,
 #waybar.main #custom-spacer3 {
-  font-family: JetBrains Mono Nerd Font;
-  font-size: 11pt;
-  font-weight: 500;
-  color: @foreground;
-  background: transparent;
+font-family: JetBrains Mono Nerd Font;
+font-size: 11pt;
+font-weight: 500;
+color: @foreground;
+background: transparent;
 }
 /* }}} */
 
 /* Custom tray icon */ /* {{{ */
 #waybar.main #custom-trayicon {
-  font-size: 15pt;
-  font-weight: bold;
-  font-style: italic;
-  color: @foreground;
-  background: transparent;
-  padding-right: 4pt;
-  padding-left: 2pt;
+font-size: 15pt;
+font-weight: bold;
+font-style: italic;
+color: @foreground;
+background: transparent;
+padding-right: 4pt;
+padding-left: 2pt;
 }
 /* }}} */
 
@@ -344,9 +354,9 @@ tooltip {
 }
 
 #waybar.main #tray menu {
-  background: @background;
-  border: 3px solid @caution;
-  border-radius: 8px;
+background: @background;
+border: 3px solid @caution;
+border-radius: 8px;
 } /* }}} */
 
 /* Indicator bar keyframes */ /* {{{ */
@@ -384,21 +394,20 @@ tooltip {
 
 /* Set defaults for indicator bar */
 #waybar.indicator {
-  font-size: 27px;
-  /* This makes indicator thicker */
-  color: rgba(0, 0, 0, 0);
-  background: rgba(0, 0, 0, 0);
+font-size: 27px;
+/* This makes indicator thicker */
+color: rgba(0, 0, 0, 0);
+background: rgba(0, 0, 0, 0);
 }
 
 /* Set "battery bar" style */
 #waybar.indicator #custom-batteryindicator {
-  border: 2.5px solid @caution;
-  background: @background;
-  border-radius: 8pt;
-  padding-left: 2237.5px;
-  /* Use this for padding:  */
-  /* (H_rez / scaling) - L_margin -R_margin - 2 * border - (font-size / 2)*/
-  /* For example: (2880px / 1.25) - 24 - 24 - 2 * 2.5 - (27 / 2) = 2237.5px */
+border: 2.5px solid @caution;
+background: @background;
+border-radius: 8pt;
+padding-left: 2237.5px;
+/* Use this for padding:  */
+/* (H_rez / scaling) - L_margin -R_margin - 2 * border - (font-size / 2)*/
+/* For example: (2880px / 1.25) - 24 - 24 - 2 * 2.5 - (27 / 2) = 2237.5px */
 }
-
 

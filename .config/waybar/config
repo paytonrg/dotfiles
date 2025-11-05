@@ -30,10 +30,7 @@
     "modules-right": [
       "custom/spacer1",
       "temperature",
-      "group/storage",
-      // "memory#swap",
-      // "disk",
-      // "cpu",
+      "cpu",
       "memory#ram",
       "custom/gpu-usage",
       "battery",
@@ -142,19 +139,21 @@
       "tooltip-format": "{alt}"
     },
 
-    "battery": {
-        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span> {capacity}%",
-        "format-icons": ["", "", "", "", ""],
-        "format-time": "{H}h{M}m",
-        "format-charging": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}%",
-        "format-full": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  Charged",
-        "interval": 30,
-        "states": {
-            "warning": 25,
-            "critical": 10
-        },
-        "tooltip": true,
-        "on-click": "2"
+
+	"battery": {
+      "format": "{icon}",  // Replace the regular space with a thin space
+      "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+      "format-time": "{H}h{M}m",
+      "format-charging": "󰂄",
+      "format-full": "󰂄",
+      "interval": 30,
+      "states": {
+        "warning": 25,
+        "critical": 10
+    },
+    "tooltip": true,
+    "tooltip-format": "{capacity}% - {time} remaining",
+    "on-click": "2"
     },
 
     "clock": {
